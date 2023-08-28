@@ -1,6 +1,6 @@
 * 
  h1{ 
-    text-align: right;
+    text-align: center;
   text-transform: uppercase;
-  color: #080000;font-family: 'Michroma', sans-serif;border: 2px green;
+  color: blue;font-family: 'Michroma', sans-serif;border: 2px green;
 }
