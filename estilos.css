@@ -1,6 +1,5 @@
 * 
  h1{ 
     text-align: center;
-  text-transform: uppercase;
-  color: blue;font-family: 'Michroma', sans-serif;border: 2px green;
+  text-color: blue
 }
