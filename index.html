@@ -1,44 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tabla de Posiciones</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 50%;
-      margin: auto;
-      margin-top: 20px;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 8px;
-      text-align: center;
-    }
-    th {
-      background-color: #f2f2f2;
-    }
-  </style>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+</style>
 </head>
 <body>
-  <h1>Tabla de Posiciones</h1>
-  <table>
-    <tr>
-      <th>Equipo</th>
-      <th>Puntos</th>
-    </tr>
-    <tr>
-      <td>Equipo A</td>
-      <td>24</td>
-    </tr>
-    <tr>
-      <td>Equipo B</td>
-      <td>18</td>
-    </tr>
-    <tr>
-      <td>Equipo C</td>
-      <td>22</td>
-    </tr>
-    <!-- Agrega más filas aquí con los equipos y sus respectivos puntos -->
-  </table>
+
+<h2>Tabla de Posiciones</h2>
+
+<table id="tablaPosiciones">
+  <tr>
+    <th onclick="sortTable(1)">Equipo</th>
+    <th onclick="sortTable(2)">Puntos</th>
+  </tr>
+  <tr>
+    <td>Equipo A</td>
+    <td>15</td>
+  </tr>
+  <tr>
+    <td>Equipo B</td>
+    <td>22</td>
+  </tr>
+  <tr>
+    <td>Equipo C</td>
+    <td>12</td>
+  </tr>
+  <!-- Agrega más filas aquí -->
+</table>
+
+<script>
+function sortTable(columnIndex) {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("tablaPosiciones");
+  switching = true;
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("td")[columnIndex];
+      y = rows[i + 1].getElementsByTagName("td")[columnIndex];
+      if (parseInt(x.innerHTML) < parseInt(y.innerHTML)) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+</script>
+
 </body>
 </html>
