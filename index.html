@@ -1,91 +1,339 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Posiciones y Fixture</title>
+    <style>
+        /* Estilo para la tabla de posiciones */
+        table {
+            border-collapse: separate;
+            width: 50%;
+            margin: 20px;
+            border: 1px solid #ddd;
+                                }
 
-th, td {
-  border: 1px solid black;
-  padding: 8px;
-  text-align: center;
-}
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            border: 1px solid #ddd;
+                   }
 
-th {
-  background-color: #f2f2f2;
-}
-</style>
+        th {
+            background-color: #00FFFF;
+        }
+
+        /* Estilo para el fixture */
+        #fixture {
+            width: 50%;
+            margin: 20px;
+        }
+
+        #fixture th, #fixture td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
+    <h1>Tabla de Posiciones</h1>
+    <table id="tablaPosiciones">
+        <thead>
+            <tr>
+                <th>Jugador</th>
+                <th>Puntos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Invitado</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Churra</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Dani</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Burro</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Magia</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Fede</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Diego</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Marcos</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
 
-<h2>Tabla de Posiciones</h2>
+    <h1>Fixture</h1>
+    <table id="fixture">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Partido</th>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Fecha 1</td>
+                <td>Marcos/Burro vs. Invitado/Dani</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 1</td>
+                <td>Diego/Fede vs. Magia/Churra</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 1</td>
+                <td>Marcos/Burro vs. Magia/Churra</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 1</td>
+                <td>Invitado/Dani vs. Diego/Fede</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 1</td>
+                <td>Diego/Fede vs. Marcos/Burro</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 1</td>
+                <td>Magia/Churra vs. Invitado/Dani</td>
+                <td>0-0</td>
+            </tr>
+                  <tr>
+                <td>Fecha 2</td>
+                <td>Marcos/Invitado vs. Burro/Dani</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 2</td>
+                <td>Diego/Magia vs. Fede/Churra</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 2</td>
+                <td>Marcos/Invitado vs. Fede/Churra</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 2</td>
+                <td>Diego/Magia vs. Burro/Dani</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 2</td>
+                <td>Burro/Dani vs. Fede/Churra</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 2</td>
+                <td>Marcos/Invitado vs. Diego/Magia</td>
+                <td>0-0</td>
 
-<table id="tablaPosiciones">
-  <tr>
-    <th onclick="sortTable(1)">Jugador</th>
-    <th onclick="sortTable(2)">Puntos</th>
-  </tr>
-  <tr>
-    <td>Castiglia</td>
-    <td>21</td>
-  </tr>
-  <tr>
-    <td>Muñe</td>
-    <td>15</td>
-  </tr>
-  <tr>
-    <td>Burro</td>
-    <td>14</td>
-  </tr>
-  <tr>
-    <td>Churra</td>
-    <td>16</td>
-  </tr>
-  <tr>
-    <td>Diego</td>
-    <td>12</td>
-  </tr>
-  <tr>
-    <td>Marcos</td>
-    <td>14</td>
-  </tr>
-  <tr>
-    <td>Alvaro</td>
-    <td>6</td>
-  </tr>
-  <tr>
-    <td>Fede</td>
-    <td>5</td>
-  </tr>
-  <!-- Agrega más filas aquí -->
-</table>
+    <tr>
+                <td>Fecha 3</td>
+                <td>Marcos/Diego vs. Invitado/Magia</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 3</td>
+                <td>Burro/Fede vs. Dani/Churra</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 3</td>
+                <td>Marcos/Diego vs. Dani/Churra</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 3</td>
+                <td>Burro/Fede vs. Invitado/Magia</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 3</td>
+                <td>Invitado/Magia vs. Dani/Churra</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 3</td>
+                <td>Marcos/Diego vs. Burro/Fede</td>
+                <td>0-0</td>
 
-<script>
-function sortTable(columnIndex) {
-  var table, rows, switching, i, x, y, shouldSwitch;
-  table = document.getElementById("tablaPosiciones");
-  switching = true;
-  while (switching) {
-    switching = false;
-    rows = table.rows;
-    for (i = 1; i < (rows.length - 1); i++) {
-      shouldSwitch = false;
-      x = rows[i].getElementsByTagName("td")[columnIndex];
-      y = rows[i + 1].getElementsByTagName("td")[columnIndex];
-      if (parseInt(x.innerHTML) < parseInt(y.innerHTML)) {
-        shouldSwitch = true;
-        break;
-      }
-    }
-    if (shouldSwitch) {
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-    }
-  }
-}
-</script>
 
+   <tr>
+                <td>Fecha 4</td>
+                <td>Marcos/Fede vs. Invitado/Churra</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 4</td>
+                <td>Dani/Magia vs. Burro/Diego</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 4</td>
+                <td>Marcos/Fede vs. Dani/Magia</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 4</td>
+                <td>Burro/Diego vs. Invitado/Churra</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 4</td>
+                <td>Marcos/Fede vs. Burro/Diego</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 4</td>
+                <td>Invitado/Churra vs. Dani/Magia</td>
+                <td>0-0</td>
+
+<tr>
+                <td>Fecha 5</td>
+                <td>Marcos/Magia vs. Diego/Invitado</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 5</td>
+                <td>Burro/Churra vs. Dani/Fede</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 5</td>
+                <td>Marcos/Magia vs. Dani/Fede</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 5</td>
+                <td>Burro/Churra vs. Diego/Invitado</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 5</td>
+                <td>Diego/Invitado vs. Dani/Fede</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 5</td>
+                <td>Marcos/Magia vs. Burro/Churra</td>
+                <td>0-0</td>
+
+<tr>
+                <td>Fecha 6</td>
+                <td>Marcos/Churra vs. Diego/Dani</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 6</td>
+                <td>Burro/Magia vs. Invitado/Fede</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 6</td>
+                <td>Marcos/Churra vs. Invitado/Fede</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 6</td>
+                <td>Burro/Magia vs. Diego/Dani</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 6</td>
+                <td>Diego/Dani vs. Invitado/Fede</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 6</td>
+                <td>Marcos/Churra vs. Burro/Magia</td>
+                <td>0-0</td>
+
+<tr>
+                <td>Fecha 7</td>
+                <td>Marcos/Dani vs. Burro/Invitado</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 7</td>
+                <td>Diego/Churra vs. Magia/Fede</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 7</td>
+                <td>Marcos/Dani vs. Magia/Fede</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 7</td>
+                <td>Diego/Churra vs. Burro/Invitado</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 7</td>
+                <td>Magia/Fede vs. Burro/Invitado</td>
+                <td>0-0</td>
+            </tr>
+            <tr>
+                <td>Fecha 7</td>
+                <td>Marcos/Dani vs. Diego/Churra</td>
+                <td>0-0</td>
+            <tr>
+           
+        </tbody>
+    </table>
+
+    <script>
+        // Función para ordenar la tabla de posiciones por puntos
+        function ordenarPorPuntos() {
+            var table, rows, switching, i, x, y, shouldSwitch;
+            table = document.getElementById("tablaPosiciones");
+            switching = true;
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+                    x = parseFloat(rows[i].getElementsByTagName("td")[1].textContent);
+                    y = parseFloat(rows[i + 1].getElementsByTagName("td")[1].textContent);
+                    if (x < y) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                }
+            }
+        }
+
+        // Llamar a la función de ordenar cuando se cargue la página
+        window.onload = ordenarPorPuntos;
+    </script>
 </body>
 </html>
